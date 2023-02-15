@@ -25,6 +25,8 @@ requiere conexion a mysql local
 
 dejo json para importar el ejemplo a postman.
 
+# torneoGeoPagos.postman_collection.json
+
 
 
 ## License
