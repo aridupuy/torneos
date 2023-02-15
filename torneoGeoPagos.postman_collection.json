@@ -8,7 +8,7 @@
 	},
 	"item": [
 		{
-			"name": "localhost:126/api/v1/login",
+			"name": "/api/v1/login",
 			"event": [
 				{
 					"listen": "test",
@@ -28,7 +28,7 @@
 				}
 			],
 			"request": {
-				"url": "localhost:126/api/v1/login",
+				"url": "127.0.0.1:8000/api/v1/login",
 				"method": "POST",
 				"header": [
 					{
@@ -46,9 +46,9 @@
 			"response": []
 		},
 		{
-			"name": "localhost:126/api/v1/torneoFemenino",
+			"name": "/api/v1/torneoFemenino",
 			"request": {
-				"url": "localhost:126/api/v1/torneo",
+				"url": "127.0.0.1:8000/api/v1/torneo",
 				"method": "POST",
 				"header": [
 					{
@@ -71,9 +71,9 @@
 			"response": []
 		},
 		{
-			"name": "localhost:126/api/v1/torneoMasculino",
+			"name": "/api/v1/torneoMasculino",
 			"request": {
-				"url": "localhost:126/api/v1/torneo",
+				"url": "127.0.0.1:8000/api/v1/torneo",
 				"method": "POST",
 				"header": [
 					{
@@ -96,9 +96,9 @@
 			"response": []
 		},
 		{
-			"name": "localhost:126/api/v1/torneos",
+			"name": "/api/v1/torneos",
 			"request": {
-				"url": "localhost:126/api/v1/torneos",
+				"url": "127.0.0.1:8000/api/v1/torneos",
 				"method": "GET",
 				"header": [
 					{
@@ -118,9 +118,9 @@
 			"response": []
 		},
 		{
-			"name": "localhost:126/api/v1/torneo/3",
+			"name": "/api/v1/torneo/3",
 			"request": {
-				"url": "localhost:126/api/v1/torneo/3",
+				"url": "127.0.0.1:8000/api/v1/torneo/1/matchs",
 				"method": "GET",
 				"header": [
 					{
@@ -140,9 +140,9 @@
 			"response": []
 		},
 		{
-			"name": "localhost:126/api/v1/torneo/3/winner",
+			"name": "/api/v1/torneo/3/winner",
 			"request": {
-				"url": "localhost:126/api/v1/torneo/3/winner",
+				"url": "127.0.0.1:8000/api/v1/torneo/3/winner",
 				"method": "GET",
 				"header": [
 					{
@@ -162,9 +162,9 @@
 			"response": []
 		},
 		{
-			"name": "localhost:126/api/v1/torneo/2/players",
+			"name": "/api/v1/torneo/2/players",
 			"request": {
-				"url": "localhost:126/api/v1/torneo/2/players",
+				"url": "127.0.0.1:8000/api/v1/torneo/2/players",
 				"method": "GET",
 				"header": [
 					{
@@ -184,9 +184,9 @@
 			"response": []
 		},
 		{
-			"name": "localhost:126/api/v1/torneo/2/matchs",
+			"name": "/api/v1/torneo/2/matchs",
 			"request": {
-				"url": "localhost:126/api/v1/torneo/2/matchs",
+				"url": "127.0.0.1:8000/api/v1/torneo/2/matchs",
 				"method": "GET",
 				"header": [
 					{
