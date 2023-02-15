@@ -1,0 +1,209 @@
+{
+	"variables": [],
+	"info": {
+		"name": "torneoGeoPagos",
+		"_postman_id": "60451f09-cd13-d62a-6273-aaeae8ead52e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:126/api/v1/login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"postman.clearEnvironmentVariable(\"tokenFullPlay\");",
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setGlobalVariable(\"token_tor\", jsonData.token);",
+							"tests[\"token_tor\"] = jsonData.token!== \"\";",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "localhost:126/api/v1/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"usuario\":\"ariel\",\n\t\"clave\":\"1234\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:126/api/v1/torneoFemenino",
+			"request": {
+				"url": "localhost:126/api/v1/torneo",
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token_tor}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"players\":[{\n\t\t\"nombre\":\"graciela\",\n\t\t\"habilidad\":\"15\",\n\t\t\"tiempoReaccion\":\"0.1\"\n\t},\n\t{\n\t\t\"nombre\":\"norma\",\n\t\t\"habilidad\":\"17\",\n\t\t\"tiempoReaccion\":\"0.5\"\n\t},\n\t{\n\t\t\"nombre\":\"alejandra\",\n\t\t\"habilidad\":\"24\",\n\t\t\"tiempoReaccion\":\"0.4\"\n\t},\n\t{\n\t\t\"nombre\":\"estela\",\n\t\t\"habilidad\":\"35\",\n\t\t\"tiempoReaccion\":\"1.5\"\n\t},\n\t{\n\t\t\"nombre\":\"rita\",\n\t\t\"habilidad\":\"10\",\n\t\t\"tiempoReaccion\":\"0.1\"\n\t},\n\t{\n\t\t\"nombre\":\"loly\",\n\t\t\"habilidad\":\"19\",\n\t\t\"tiempoReaccion\":\"0.3\"\n\t},\n\t{\n\t\t\"nombre\":\"sara\",\n\t\t\"habilidad\":\"1\",\n\t\t\"tiempoReaccion\":\"1.0\"\n\t},\n\t{\n\t\t\"nombre\":\"carolina\",\n\t\t\"habilidad\":\"25\",\n\t\t\"tiempoReaccion\":\"0.3\"\n\t}\n\t],\n\t\n\t\"torneo\":{\n\t\t\"tipo\":\"m\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:126/api/v1/torneoMasculino",
+			"request": {
+				"url": "localhost:126/api/v1/torneo",
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token_tor}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"players\":[{\n\t\t\"nombre\":\"jorge\",\n\t\t\"habilidad\":\"15\",\n\t\t\"fuerza\":\"15\",\n\t\t\"velocidad\":\"45\"\n\t},\n\t{\n\t\t\"nombre\":\"juan\",\n\t\t\"habilidad\":\"17\",\n\t\t\"fuerza\":\"20\",\n\t\t\"velocidad\":\"56\"\n\t},\n\t{\n\t\t\"nombre\":\"roberto\",\n\t\t\"habilidad\":\"24\",\n\t\t\"fuerza\":\"45\",\n\t\t\"velocidad\":\"90\"\n\t},\n\t{\n\t\t\"nombre\":\"jose\",\n\t\t\"habilidad\":\"35\",\n\t\t\"fuerza\":\"59\",\n\t\t\"velocidad\":\"15\"\n\t},\n\t{\n\t\t\"nombre\":\"ricardo\",\n\t\t\"habilidad\":\"10\",\n\t\t\"fuerza\":\"80\",\n\t\t\"velocidad\":\"50\"\n\t},\n\t{\n\t\t\"nombre\":\"horacio\",\n\t\t\"habilidad\":\"19\",\n\t\t\"fuerza\":\"14\",\n\t\t\"velocidad\":\"35\"\n\t},\n\t{\n\t\t\"nombre\":\"eduardo\",\n\t\t\"habilidad\":\"1\",\n\t\t\"fuerza\":\"35\",\n\t\t\"velocidad\":\"11\"\n\t},\n\t{\n\t\t\"nombre\":\"ariel\",\n\t\t\"habilidad\":\"25\",\n\t\t\"fuerza\":\"89\",\n\t\t\"velocidad\":\"15\"\n\t}\n\t],\n\t\n\t\"torneo\":{\n\t\t\"tipo\":\"h\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:126/api/v1/torneos",
+			"request": {
+				"url": "localhost:126/api/v1/torneos",
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token_tor}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:126/api/v1/torneo/3",
+			"request": {
+				"url": "localhost:126/api/v1/torneo/3",
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token_tor}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:126/api/v1/torneo/3/winner",
+			"request": {
+				"url": "localhost:126/api/v1/torneo/3/winner",
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token_tor}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:126/api/v1/torneo/2/players",
+			"request": {
+				"url": "localhost:126/api/v1/torneo/2/players",
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token_tor}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:126/api/v1/torneo/2/matchs",
+			"request": {
+				"url": "localhost:126/api/v1/torneo/2/matchs",
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token_tor}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
