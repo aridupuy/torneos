@@ -21,7 +21,7 @@ requiere conexion a mysql local
 # ./artisan serve
 
 ```
-##Postman
+## Postman
 
 dejo json para importar el ejemplo a postman.
 
