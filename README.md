@@ -1,4 +1,4 @@
-##mysql
+## mysql
 
 requiere conexion a mysql local
 
@@ -25,8 +25,8 @@ requiere conexion a mysql local
 
 dejo json para importar el ejemplo a postman.
 
-# torneoGeoPagos.postman_collection.json
 
+[torneoGeoPagos.postman_collection.json](https://github.com/aridupuy/torneos/blob/825563f7b8040b297329f560d743e6787e3ea49c/torneoGeoPagos.postman_collection.json)
 
 
 ## License
