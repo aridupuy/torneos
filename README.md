@@ -1,3 +1,15 @@
+##mysql
+
+requiere conexion a mysql local
+
+
+
+## Composer
+```
+# composer install
+
+```
+
 ## Migrations
 ```
 # php artisan migrate:fresh
@@ -9,6 +21,11 @@
 # ./artisan serve
 
 ```
+##Postman
+
+dejo json para importar el ejemplo a postman.
+
+
 
 ## License
 
